@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    /* Additional Checks */
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "types": [],
+    "lib": [
+      "es5"
+    ],
+    /* dtslint needs these to operate in this directory */
+    "baseUrl": ".",
+    "paths": {
+      "pubsub-class": [
+        "../../src"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "dtslint/dtslint.json",
+  "rules": {
+    "no-useless-files": false,
+    "eofline": false,
+    "no-relative-import-in-test": false,
+    "prefer-while": false,
+    "no-unnecessary-callback-wrapper": false,
+    "arrow-return-shorthand": false,
+    "no-misused-new": false
+  }
+}

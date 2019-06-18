@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es5",
+        "lib": [ "es5" ],
+        "strict": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "types": []
+    },
+    "include": [
+        "src/*"
+    ],
+    "exclude": [
+        "__tests__/*",
+        "node_modules"
+    ]
+}

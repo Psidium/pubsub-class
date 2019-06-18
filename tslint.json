@@ -1,0 +1,18 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-clean-code",
+        "tslint-plugin-prettier", 
+        "tslint-config-prettier"
+    ],
+    "rules": {
+      "prettier": true,
+      "interface-name": [true, "never-prefix"],
+      "try-catch-first": true,
+      "max-func-args": [true, 3],
+      "no-flag-args": true,
+      "no-complex-conditionals": true,
+      "no-commented-out-code": true
+    }
+  }
