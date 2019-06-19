@@ -1,4 +1,4 @@
-interface InternalClassEventMetadata<ThisClass, EventMap extends object> {
+export interface InternalClassEventMetadata<ThisClass, EventMap extends object> {
   __eventDefinitions?: {
     specificEventIdentifier: keyof EventMap;
     methodName: keyof ThisClass;

@@ -14,7 +14,12 @@
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "sourceMap": true,
-        "outDir": "dist",
+        /* not activating importHelpers on porpose */
+        // "importHelpers": true,
+        // "noEmitHelpers": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "outDir": "./lib",
         "baseUrl": ".",
         "types": []
     },
@@ -22,7 +27,8 @@
         "src/*"
     ],
     "exclude": [
-        "__tests__/*",
-        "node_modules"
+        "test/*",
+        "node_modules",
+        "lib"
     ]
 }

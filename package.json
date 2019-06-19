@@ -2,7 +2,8 @@
   "name": "pubsub-class",
   "version": "1.0.0",
   "description": "PubSub pattern binding using ES6 Decorators",
-  "main": "index.js",
+  "typings": "lib/index.d.ts",
+  "main": "lib/index.js",
   "repository": "https://github.com/Psidium/pubsub-class",
   "author": "Psidium",
   "license": "MIT",
@@ -19,9 +20,19 @@
     "typescript": "^2.9"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "rimraf lib && tsc -p tsconfig.json",
     "build:watch": "tsc -p tsconfig.json -w",
     "test": "jest",
-    "dtslint": "dtslint __tests__/types"
+    "test:watch": "jest --watchAll",
+    "dtslint": "dtslint test/types",
+    "lint": "tslint --project tsconfig.json --fix && prettier --write"
+  },
+  "files": [
+    "lib",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "directories": {
+    "lib": "lib"
   }
 }
