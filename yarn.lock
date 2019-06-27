@@ -3600,15 +3600,15 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-typescript@^2.9:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
-  integrity sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
-
 typescript@next:
   version "3.6.0-dev.20190615"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.0-dev.20190615.tgz#02a1a61526318901fc99c274c839cde05d4a4d8c"
   integrity sha512-DKxiKVjcd2Tw5LGCAjO9qw4xr4/bVUyeg0PRf/90xqlnVP+nP6xG17gd0Ujn5rkBd5BDDM6NnXD0GS3rPXmDFA==
+
+typescript@~2.8:
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.4.tgz#0b1db68e6bdfb0b767fa2ab642136a35b059b199"
+  integrity sha512-IIU5cN1mR5J3z9jjdESJbnxikTrEz3lzAw/D0Tf45jHpBp55nY31UkUvmVHoffCfKHTqJs3fCLPDxknQTTFegQ==
 
 uglify-js@^3.1.4:
   version "3.6.0"
