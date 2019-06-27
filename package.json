@@ -1,6 +1,6 @@
 {
   "name": "pubsub-class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PubSub pattern binding using ES6 Decorators",
   "typings": "lib/index.d.ts",
   "main": "lib/index.js",
@@ -17,7 +17,7 @@
     "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^2.9"
+    "typescript": "~2.8"
   },
   "scripts": {
     "build": "rimraf lib && tsc -p tsconfig.json",
