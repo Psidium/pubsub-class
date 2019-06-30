@@ -5,7 +5,7 @@ export const Listener = <
   EventMap extends object,
   ListenedClass extends ListenerClass<ListenedClass, EventMap>
 >(
-  eventBus: PubSubProvider<EventMap>
+  getEventBus: () => PubSubProvider<EventMap>
 ) => (constructor: Class<ListenedClass>) => {
   const original = constructor;
   // override constructor to observe on every instantiation
@@ -18,7 +18,7 @@ export const Listener = <
         methodName
       } of instance.__eventDefinitions) {
         // subscribe all observers
-        eventBus
+        getEventBus()
           .fromEvent(specificEventIdentifier)
           .subscribe((data: EventMap[keyof EventMap]) => {
             const method = instance[methodName];

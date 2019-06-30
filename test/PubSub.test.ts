@@ -1,5 +1,6 @@
-import { CreateDecorated, MalformedUpdateDecorated } from "./implementation/DecoratedClass";
+import { CreateDecorated, MalformedUpdateDecorated, DelayedCreateDecorated, delayedEventBus } from "./implementation/DecoratedClass";
 import { FakeEventBusInstance } from "./implementation/EventBusInstance";
+import "jest";
 
 describe("The Declarated class", function() {
   it("instantiates", function() {
@@ -19,5 +20,14 @@ describe("The Declarated class", function() {
         .fromEvent("update")
         .publish({ update: true });
     expect(decorated.shouldUpdate).toBeUndefined();
+  });
+  it("only tries to load the eventbus on instantiation", function () {
+    expect(() => new DelayedCreateDecorated()).toThrowError();
+    delayedEventBus.eventBus = FakeEventBusInstance;
+    const decorated = new DelayedCreateDecorated();
+    FakeEventBusInstance
+      .fromEvent("create")
+      .publish({ firstArgument: "aa" });
+    expect(decorated.firstArgument).toBe("aa");
   });
 });
