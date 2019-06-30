@@ -1,6 +1,6 @@
 {
   "name": "pubsub-class",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PubSub pattern binding using ES6 Decorators",
   "typings": "lib/index.d.ts",
   "main": "lib/index.js",
