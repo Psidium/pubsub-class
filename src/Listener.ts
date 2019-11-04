@@ -44,7 +44,7 @@ export const Listener = <
           .subscribe((data: EventMap[keyof EventMap], logger?: Logger) => {
             const method = instance[methodName];
             if (typeof method === "function") {
-              if (logger && logger.getLevel() > Level.DEBUG && (instance.constructor as FunctionWithName).name ) {
+              if (logger && logger.getLevel() >= Level.DEBUG && (instance.constructor as FunctionWithName).name ) {
                 logger.debug(`Calling ${(instance.constructor as FunctionWithName).name}.${methodName}`, undefined, "PubSub");
               }
               // bypassing type assertion to call the method
