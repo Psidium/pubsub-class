@@ -19,7 +19,7 @@ type FunctionWithName = Function & Name; //using property not supported in IE
 
 export interface Logger {
   getLevel(): Level;
-  trace(message: string, details?: string, component?: string): void;
+  debug(message: string, details?: string, component?: string): void;
 }
 
 export const Listener = <
@@ -44,8 +44,8 @@ export const Listener = <
           .subscribe((data: EventMap[keyof EventMap], logger?: Logger) => {
             const method = instance[methodName];
             if (typeof method === "function") {
-              if (logger && logger.getLevel() > Level.TRACE && (instance.constructor as FunctionWithName).name ) {
-                logger.trace(`Calling ${(instance.constructor as FunctionWithName).name}.${methodName}`, undefined, "PubSub");
+              if (logger && logger.getLevel() > Level.DEBUG && (instance.constructor as FunctionWithName).name ) {
+                logger.debug(`Calling ${(instance.constructor as FunctionWithName).name}.${methodName}`, undefined, "PubSub");
               }
               // bypassing type assertion to call the method
               ((method as any) as Function).call(instance, data);

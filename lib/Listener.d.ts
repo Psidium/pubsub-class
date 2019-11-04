@@ -11,6 +11,6 @@ export declare enum Level {
 }
 export interface Logger {
     getLevel(): Level;
-    trace(message: string, details?: string, component?: string): void;
+    debug(message: string, details?: string, component?: string): void;
 }
 export declare const Listener: <EventMap extends object, ListenedClass extends Pick<ListenedClass, Exclude<keyof ListenedClass, Extract<keyof ListenedClass, "__eventDefinitions">>> & InternalClassEventMetadata<ListenedClass, EventMap>>(getEventBus: () => PubSubProvider<EventMap>) => (constructor: Class<ListenedClass>) => Class<ListenedClass>;
