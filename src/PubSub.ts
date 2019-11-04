@@ -1,3 +1,5 @@
+import { Logger } from "./Listener";
+
 export interface InternalClassEventMetadata<ThisClass, EventMap extends object> {
   __eventDefinitions?: {
     specificEventIdentifier: keyof EventMap;
@@ -12,7 +14,7 @@ export interface PubSubProvider<EventMap extends object> {
 }
 
 export interface PubSubEvent<EventData> {
-    subscribe(callback: (data: EventData) => void): void;
+    subscribe(callback: (data: EventData) => void, logger?: Logger): void;
     publish(data: EventData): void;
     unsubscribe(): void;
 }
