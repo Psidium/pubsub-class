@@ -1,4 +1,4 @@
-import { ListenerClass, Class, PubSubProvider } from "./PubSub";
+import { ListenerClass, Class, PubSubProvider, InternalClassEventMetadata } from "./PubSub";
 
 export enum Level {
   NONE = -1,
